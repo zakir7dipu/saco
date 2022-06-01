@@ -1,0 +1,39 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>{{ this.page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+
+    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Mulish:500,600,700,900%7COpen+Sans:400,700&amp;display=swap">
+    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/fonts.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/font-awesome.min.css'|theme }}"/>
+    <link rel="stylesheet" href="{{ 'assets/css/materialdesignicons.min.css'|theme }}"/>
+    <link rel="stylesheet" href="{{ 'assets/css/style.css'|theme }}">
+</head>
+<body>
+<!--Preloader area start here-->
+{% partial 'preloader' %}
+<div class="page">
+    <!-- Header-->
+{% partial 'header' %}
+
+{% page %}
+<!-- Main content End -->
+
+<!-- Footer Start -->
+{% partial 'footer' %}
+<!-- Footer End -->
+</div>
+<div class="snackbars" id="form-output-global"></div>
+<script src="{{ 'assets/js/core.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/script.js'|theme }}"></script>
+</body>
+</html>
